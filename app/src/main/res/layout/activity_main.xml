@@ -1,60 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f8f8f8"
+    tools:context=".MainActivity"
+    >
 
-    tools:context=".MainActivity">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/white"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+        app:tabMode="scrollable" />
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:gravity="center_horizontal"
-       android:orientation="vertical"
-       >
-       <!--<ImageView
-           android:layout_width="300dp"
-           android:layout_height="150dp"
-           android:src="@mipmap/yifei"
-           />-->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-       <com.apache.customwidget.clip.ClipImageView
-           android:layout_width="match_parent"
-           android:layout_height="200dp"
-           android:layout_marginTop="20dp"
-           android:background="@color/colorPrimary"
-           />
 
-       <com.apache.customwidget.clip.TransformationsDemo
-           android:layout_width="match_parent"
-           android:layout_height="200dp"
-           android:layout_marginTop="20dp"
-           android:background="@color/colorPrimary"
-           />
-       <com.apache.customwidget.clip.MatrixDemo
-           android:layout_width="match_parent"
-           android:layout_height="200dp"
-           android:layout_marginTop="20dp"
-           android:background="@color/colorPrimary"
-           />
-       <com.apache.customwidget.clip.CameraDemo
-           android:layout_width="match_parent"
-           android:layout_height="200dp"
-           android:layout_marginTop="20dp"
-           android:background="@color/colorPrimary"
-           />
-       <com.apache.customwidget.paint.PaintDemo
-           android:layout_width="match_parent"
-           android:layout_height="300dp"
-           android:layout_marginTop="20dp"
-           />
-       <com.apache.customwidget.paint.BitmapShaderDemo
-           android:layout_width="match_parent"
-           android:layout_height="400dp"
-           android:layout_marginTop="20dp"
-           />
-   </LinearLayout>
-
-</ScrollView>
+</LinearLayout>
